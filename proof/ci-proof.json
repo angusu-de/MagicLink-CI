@@ -1,0 +1,46 @@
+{
+  "badge_design_source": "IamAngusU/Badges",
+  "badge_design_source_commit": "3ce6d01e32c7422e74755a37f86ba9478e47aafe",
+  "claim": "separate public CI harness; exact public commit; same maintainer; not a third-party audit",
+  "harness_sha": "62aa6078fd2353f8292f636dee4af6a23428ca3f",
+  "jobs": [
+    {
+      "conclusion": "success",
+      "name": "PHP 8.4 \u00b7 SQLite",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "name": "Source c61e5c523fc750bc10d6aa7ae0b0dc5e6b1414f6 \u00b7 package",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "name": "PHP 8.4 \u00b7 MySQL 8.4",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "name": "PHP 8.2 \u00b7 SQLite",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "name": "PHP 8.3 \u00b7 SQLite",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "name": "Workflow security",
+      "status": "completed"
+    }
+  ],
+  "jobs_success": 6,
+  "jobs_total": 6,
+  "repository": "angusu-de/MagicLink-CI",
+  "run_id": 37836373039,
+  "run_number": 12,
+  "run_url": "https://github.com/angusu-de/MagicLink-CI/actions/runs/37836373039",
+  "source_repository": "IamAngusU/MagicLink",
+  "source_sha": "c61e5c523fc750bc10d6aa7ae0b0dc5e6b1414f6"
+}
