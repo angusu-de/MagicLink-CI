@@ -12,7 +12,7 @@ import urllib.request
 from pathlib import Path
 
 BADGE_DESIGN_SOURCE = "IamAngusU/Badges"
-BADGE_DESIGN_SOURCE_COMMIT = "5dead285728880b806bb32be4a0509d0587d6d45"
+BADGE_DESIGN_SOURCE_COMMIT = "d93d20f5fd53be6abad978e3df03d52f3e22897b"
 SOURCE_JOB = re.compile(r"^Source ([0-9a-f]{40}) · package$")
 TEMPLATE_PATH = Path(__file__).resolve().parents[1] / "docs" / "assets" / "ci-proof-template.svg"
 
