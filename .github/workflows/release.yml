@@ -12,6 +12,7 @@ permissions: {}
 
 jobs:
   build:
+    environment: private-source
     runs-on: ubuntu-latest
     permissions:
       contents: read
