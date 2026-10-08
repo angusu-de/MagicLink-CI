@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       source_sha:
-        description: Exact 40-character commit from the private IamAngusU/MagicLink repository
+        description: Exact 40-character commit from the public IamAngusU/MagicLink repository
         required: true
         type: string
 
@@ -12,7 +12,7 @@ permissions: {}
 
 jobs:
   build:
-    environment: private-source
+    if: github.repository == 'angusu-de/MagicLink-CI'
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -21,7 +21,6 @@ jobs:
         with:
           repository: IamAngusU/MagicLink
           ref: ${{ inputs.source_sha }}
-          ssh-key: ${{ secrets.MAGICLINK_DEPLOY_KEY }}
           persist-credentials: false
       - name: Verify immutable source revision
         env:
@@ -37,7 +36,7 @@ jobs:
           extensions: pdo_sqlite, openssl, sodium
           coverage: none
       - run: php bin/check.php
-      - name: Build without publishing private source
+      - name: Build without publishing source
         shell: bash
         run: |
           set -euo pipefail
@@ -58,6 +57,7 @@ jobs:
           test -f dist/package/public/.htaccess
           test -f dist/package/.htaccess
           test -f dist/package/.env.example
+          test -f dist/package/LICENSE
           test -f dist/package/resources/mail-templates/en/html.html
           test -f dist/package/resources/mail-templates/de/html.html
           grep -Fx 'post_max_size=16K' dist/package/public/.user.ini
